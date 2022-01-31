@@ -11,12 +11,12 @@ export function SignIn() {
                     <h1>Hey there!</h1>
 
                     <label>
-                        <span>Enter your email adress</span>
+                        <span>Email</span>
                         <input required type="email" placeholder="Enter your email adress" />
                     </label>
 
                     <label>
-                        <span>Enter your password</span>
+                        <span>Password</span>
                         <input required type="password" placeholder="Enter your password" />
                     </label>
 
