@@ -1,0 +1,489 @@
+{
+    "genres": [
+        {
+            "id": 1,
+            "name": "Hip-Hop"
+        },
+        {
+            "id": 2,
+            "name": "Pop"
+        },
+        {
+            "id": 3,
+            "name": "Rock"
+        },
+        {
+            "id": 4,
+            "name": "Electronic"
+        },
+        {
+            "id": 5,
+            "name": "Classical"
+        }
+    ],
+    "songs": [
+        {
+            "id": 1,
+            "genreId": 1,
+            "title": "Still",
+            "artist": "Dr. Dre feat. Snoop Dogg"
+        },
+        {
+            "id": 2,
+            "genreId": 1,
+            "title": "Flexing",
+            "artist": "Pop Smoke"
+        },
+        {
+            "id": 3,
+            "genreId": 1,
+            "title": "Backseat Freestyle",
+            "artist": "Kendrick Lamar"
+        },
+        {
+            "id": 4,
+            "genreId": 1,
+            "title": "Ready To Die",
+            "artist": "The Notorious B.I.G"
+        },
+        {
+            "id": 5,
+            "genreId": 1,
+            "title": "No Role Modelz",
+            "artist": "J. Cole"
+        },
+        {
+            "id": 6,
+            "genreId": 1,
+            "title": "Today Was A Good Day",
+            "artist": "Ice Cube"
+        },
+        {
+            "id": 7,
+            "genreId": 1,
+            "title": "Full Clip",
+            "artist": "Gang Starr"
+        },
+        {
+            "id": 8,
+            "genreId": 2,
+            "title": "New Rules",
+            "artist": "Dua Lipa"
+        },
+        {
+            "id": 9,
+            "genreId": 2,
+            "title": "Often",
+            "artist": "The Weeknd"
+        },
+        {
+            "id": 10,
+            "genreId": 2,
+            "title": "King Of The Fall",
+            "artist": "The Weeknd"
+        },
+        {
+            "id": 11,
+            "genreId": 2,
+            "title": "Six Feet Under",
+            "artist": "Billie Eilish"
+        },
+        {
+            "id": 12,
+            "genreId": 2,
+            "title": "Talking To The Moon",
+            "artist": "Bruno Mars"
+        },
+        {
+            "id": 13,
+            "genreId": 2,
+            "title": "Run The World",
+            "artist": "Beyonce"
+        },
+        {
+            "id": 14,
+            "genreId": 2,
+            "title": "Diamonds",
+            "artist": "Rihanna"
+        },
+        {
+            "id": 15,
+            "genreId": 3,
+            "title": "Beggin",
+            "artist": "Maneskin"
+        },
+        {
+            "id": 16,
+            "genreId": 3,
+            "title": "Highway To Hell",
+            "artist": "AC/DC"
+        },
+        {
+            "id": 17,
+            "genreId": 3,
+            "title": "Back in Black",
+            "artist": "AC/DC"
+        },
+        {
+            "id": 18,
+            "genreId": 3,
+            "title": "Thunderstruck",
+            "artist": "AC/DC"
+        },
+        {
+            "id": 19,
+            "genreId": 3,
+            "title": "Paranoid",
+            "artist": "Black Sabbath"
+        },
+        {
+            "id": 20,
+            "genreId": 3,
+            "title": "Purple Haze",
+            "artist": "Jimi Hendrix"
+        },
+        {
+            "id": 21,
+            "genreId": 3,
+            "title": "Sweet Child O' Mine",
+            "artist": "Guns n'Roses "
+        },
+        {
+            "id": 22,
+            "genreId": 4,
+            "title": "Lean On Me",
+            "artist": "Major Lazer"
+        },
+        {
+            "id": 23,
+            "genreId": 4,
+            "title": "Light It Up",
+            "artist": "Major Lazer"
+        },
+        {
+            "id": 24,
+            "genreId": 4,
+            "title": "Bubble Butt",
+            "artist": "Major Lazer ft. Bruno Mars"
+        },
+        {
+            "id": 25,
+            "genreId": 4,
+            "title": "Be Together",
+            "artist": "Major Lazer"
+        },
+        {
+            "id": 26,
+            "genreId": 4,
+            "title": "Levels",
+            "artist": "Avicci"
+        },
+        {
+            "id": 27,
+            "genreId": 4,
+            "title": "Purple Lamborghini",
+            "artist": "Skrillex"
+        },
+        {
+            "id": 28,
+            "genreId": 4,
+            "title": "Bangarang",
+            "artist": "Skrillex"
+        },
+        {
+            "id": 29,
+            "genreId": 5,
+            "title": "Piano Sonata No.17",
+            "artist": "Bethoven"
+        },
+        {
+            "id": 30,
+            "genreId": 5,
+            "title": "MoonLight Sonata",
+            "artist": "Bethoven"
+        },
+        {
+            "id": 31,
+            "genreId": 5,
+            "title": "Fur Elise",
+            "artist": "Bethoven"
+        },
+        {
+            "id": 32,
+            "genreId": 5,
+            "title": "Four Seasons: Winter",
+            "artist": "Vivaldi"
+        },
+        {
+            "id": 33,
+            "genreId": 5,
+            "title": "Waltz No.2",
+            "artist": "Dmitri Shostakovich"
+        },
+        {
+            "id": 34,
+            "genreId": 5,
+            "title": "River Flows In You",
+            "artist": "Yiruma"
+        }
+    ],
+    "users": [
+        {
+            "username": "Marvin",
+            "email": "marvin@mail.com",
+            "password": "marvin",
+            "favoriteSongs": [
+                {
+                    "id": 1,
+                    "genreId": 1,
+                    "title": "Still",
+                    "artist": "Dr. Dre feat. Snoop Dogg"
+                },
+                {
+                    "id": 2,
+                    "genreId": 1,
+                    "title": "Flexing",
+                    "artist": "Pop Smoke"
+                },
+                {
+                    "id": 3,
+                    "genreId": 1,
+                    "title": "Backseat Freestyle",
+                    "artist": "Kendrick Lamar"
+                }
+            ],
+            "playlists": [
+                {
+                    "title": "Fire",
+                    "songs": [
+                        {
+                            "id": 4,
+                            "genreId": 1,
+                            "title": "Ready To Die",
+                            "artist": "The Notorious B.I.G"
+                        },
+                        {
+                            "id": 5,
+                            "genreId": 1,
+                            "title": "No Role Modelz",
+                            "artist": "J. Cole"
+                        },
+                        {
+                            "id": 6,
+                            "genreId": 1,
+                            "title": "Today Was A Good Day",
+                            "artist": "Ice Cube"
+                        },
+                        {
+                            "id": 7,
+                            "genreId": 1,
+                            "title": "Full Clip",
+                            "artist": "Gang Starr"
+                        }
+                    ]
+                },
+                {
+                    "title": "Sleep",
+                    "songs": [
+                        {
+                            "id": 32,
+                            "genreId": 4,
+                            "title": "Four Seasons: Winter",
+                            "artist": "Vivaldi"
+                        },
+                        {
+                            "id": 33,
+                            "genreId": 4,
+                            "title": "Waltz No.2",
+                            "artist": "Dmitri Shostakovich"
+                        },
+                        {
+                            "id": 34,
+                            "genreId": 4,
+                            "title": "River Flows In You",
+                            "artist": "Yiruma"
+                        }
+                    ]
+                }
+            ],
+            "favoriteArtists": [
+                {
+                    "name": "Pop Smoke",
+                    "id": 3,
+                    "genreId": 1,
+                    "picture": "https://i.scdn.co/image/ab6761610000e5eb597f9edd2cd1a892d4412b09"
+                },
+                {
+                    "name": "Kendrick Lamar",
+                    "id": 4,
+                    "genreId": 1,
+                    "picture": "https://spottedsounds.com/wp-content/uploads/2018/08/kendrick-lamar.jpg"
+                },
+                {
+                    "name": "The Notorious B.I.G",
+                    "id": 5,
+                    "genreId": 1,
+                    "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO39qAJG-default.jpg"
+                }
+            ]
+        }
+    ],
+    "artists": [
+        {
+            "name": "Dr.Dre",
+            "id": 1,
+            "genreId": 1,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO3VkoW4-default.jpg"
+        },
+        {
+            "name": "Snoop Dogg",
+            "id": 2,
+            "genreId": 1,
+            "picture": "https://i.scdn.co/image/ab6761610000e5eb9a398209a4ef3360dce2dec4"
+        },
+        {
+            "name": "Pop Smoke",
+            "id": 3,
+            "genreId": 1,
+            "picture": "https://i.scdn.co/image/ab6761610000e5eb597f9edd2cd1a892d4412b09"
+        },
+        {
+            "name": "Kendrick Lamar",
+            "id": 4,
+            "genreId": 1,
+            "picture": "https://spottedsounds.com/wp-content/uploads/2018/08/kendrick-lamar.jpg"
+        },
+        {
+            "name": "The Notorious B.I.G",
+            "id": 5,
+            "genreId": 1,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO39qAJG-default.jpg"
+        },
+        {
+            "name": "J.Cole",
+            "id": 6,
+            "genreId": 1,
+            "picture": "https://i.scdn.co/image/ab67706f000000023dbbfd76ed4226ca52e44c4e"
+        },
+        {
+            "name": "Ice Cube",
+            "id": 7,
+            "genreId": 1,
+            "picture": "https://i.scdn.co/image/ab6761610000e5eb650e79afafd00492e33d7b8c"
+        },
+        {
+            "name": "Gang Starr",
+            "id": 8,
+            "genreId": 1,
+            "picture": "https://lite-images-i.scdn.co/image/ab67616d0000b273e38d4567dbeb5decf989a84d"
+        },
+        {
+            "name": "Dua Lipa",
+            "id": 9,
+            "genreId": 2,
+            "picture": "https://lite-images-i.scdn.co/image/ab67706f00000002880da7c5be289f2c7787ccd2"
+        },
+        {
+            "name": "The Weeknd",
+            "id": 10,
+            "genreId": 2,
+            "picture": "https://i.scdn.co/image/ab67706f00000003387c0ddfa4c7553ce24edba5"
+        },
+        {
+            "name": "Billie Eilish",
+            "id": 11,
+            "genreId": 2,
+            "picture": "https://i.scdn.co/image/ab67706f000000034d26d431869cabfc53c67d8e"
+        },
+        {
+            "name": "Bruno Mars",
+            "id": 12,
+            "genreId": 2,
+            "picture": "https://i.scdn.co/image/ab67706f000000036ce408042bebe4b19a5ede72"
+        },
+        {
+            "name": "Beyonce",
+            "id": 13,
+            "genreId": 2,
+            "picture": "https://i.scdn.co/image/ab67706f00000003e3e2727edc2f59616536f30b"
+        },
+        {
+            "name": "Rihanna",
+            "id": 14,
+            "genreId": 2,
+            "picture": "https://i.scdn.co/image/ab67706f00000003efdcaeb6d5a53f0628022192"
+        },
+        {
+            "name": "Maneskin",
+            "id": 15,
+            "genreId": 3,
+            "picture": "https://pbs.twimg.com/media/E3Ln52gXwAQ9snJ?format=jpg&name=large"
+        },
+        {
+            "name": "AC/DC",
+            "id": 16,
+            "genreId": 3,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO49hLQA-default.jpg"
+        },
+        {
+            "name": "Black Sabbath",
+            "id": 17,
+            "genreId": 3,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO3oYXfO-default.jpg"
+        },
+        {
+            "name": "Jimi Hendrix",
+            "id": 18,
+            "genreId": 3,
+            "picture": "https://lite-images-i.scdn.co/image/ab67706f0000000245498745ad37fecec2835633"
+        },
+        {
+            "name": "Guns n' Roses",
+            "id": 19,
+            "genreId": 3,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO1Ziym4-default.jpg"
+        },
+        {
+            "name": "Major Lazer",
+            "id": 20,
+            "genreId": 4,
+            "picture": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO4aypPO-large.jpg"
+        },
+        {
+            "name": "Avicci",
+            "id": 21,
+            "genreId": 4,
+            "picture": "https://i.scdn.co/image/ab67706f00000003136380a2498089b7ead3122c"
+        },
+        {
+            "name": "Skrillex",
+            "id": 22,
+            "genreId": 4,
+            "picture": "https://i.scdn.co/image/ab67706f00000003a90d6064ee6625dbba0851c5"
+        },
+        {
+            "name": "Bethoven",
+            "id": 23,
+            "genreId": 5,
+            "picture": "https://lite-images-i.scdn.co/image/ab67706f00000002255243f29ac28ef92ec7644a"
+        },
+        {
+            "name": "Vivaldi",
+            "id": 24,
+            "genreId": 5,
+            "picture": "https://i.scdn.co/image/ab67706f00000003995af0c89200809b471d1264"
+        },
+        {
+            "name": "Dmitri Shostakovich",
+            "id": 25,
+            "genreId": 5,
+            "picture": "https://i.scdn.co/image/28f745db0a77d0e70db1c0be305f51b3478706aa"
+        },
+        {
+            "name": "Yiruma",
+            "id": 26,
+            "genreId": 5,
+            "picture": "https://i.scdn.co/image/ab67706f000000034c0cd6257a9f69ee5ed2eb51"
+        }
+    ]
+}
