@@ -1,10 +1,18 @@
+import { useEffect, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Main } from './components/pages/Main'
 import { SignIn } from './components/pages/SignIn'
 import { SignUp } from './components/pages/SignUp'
+import { useStore } from './components/store'
 
 function App() {
+  const {updateUsers} = useStore()
+
+  useEffect(() => {
+    fetch('http://localhost:3001/users').then(resp => resp.json())
+    .then(usersFromServer => updateUsers(usersFromServer))
+  })
 
   return (
     <div className="App">

@@ -229,6 +229,7 @@
     ],
     "users": [
         {
+            "id":1,
             "username": "Marvin",
             "email": "marvin@mail.com",
             "password": "marvin",
@@ -287,19 +288,19 @@
                     "songs": [
                         {
                             "id": 32,
-                            "genreId": 4,
+                            "genreId": 5,
                             "title": "Four Seasons: Winter",
                             "artist": "Vivaldi"
                         },
                         {
                             "id": 33,
-                            "genreId": 4,
+                            "genreId": 5,
                             "title": "Waltz No.2",
                             "artist": "Dmitri Shostakovich"
                         },
                         {
                             "id": 34,
-                            "genreId": 4,
+                            "genreId": 5,
                             "title": "River Flows In You",
                             "artist": "Yiruma"
                         }
