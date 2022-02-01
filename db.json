@@ -233,6 +233,7 @@
       "username": "Marvin",
       "email": "marvin@mail.com",
       "password": "marvin",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/Marvin.svg",
       "favoriteSongs": [
         {
           "id": 1,
@@ -332,6 +333,7 @@
       "username": "vini",
       "email": "vini@mail.com",
       "password": "vini",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
       "favoriteSongs": [],
       "playlists": [],
       "favoriteArtists": [],
@@ -341,6 +343,7 @@
       "username": "nani",
       "email": "nani@mail.com",
       "password": "nani",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/nani.svg",
       "favoriteSongs": [],
       "playlists": [],
       "favoriteArtists": [],

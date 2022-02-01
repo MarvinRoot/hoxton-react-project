@@ -20,14 +20,15 @@ body {
   margin-bottom: 0.7rem;
   text-align: center;
   font-size: 50px;
-  background: -webkit-linear-gradient(rgba(66, 29, 66, 0.575), rgba(24, 17, 80, 0.712) );
+  font-family: 'Noto Serif JP', serif;
+  background: -webkit-linear-gradient(rgba(156, 72, 156, 0.575), rgba(13, 9, 44, 0.712) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h2{
   margin-bottom: 5rem;
   text-align: center;
-  background: -webkit-linear-gradient(rgba(24, 17, 80, 0.712),rgba(66, 29, 66, 0.575) );
+  background: -webkit-linear-gradient(rgba(13, 9, 44, 0.712),rgba(133, 61, 133, 0.575) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,4 +84,81 @@ h2{
   padding: 10px;
   width: 270px ;
   cursor: pointer;
+}
+
+.hoxtify-app {
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.hoxtify-app .header {
+  display: grid;
+  grid-template-columns: 17rem 1fr auto;
+}
+
+.hoxtify-app .main-wrapper {
+  display: grid;
+  grid-template-columns: 17rem 1fr;
+}
+
+.main-wrapper .main-page-content {
+  border-left: solid rgb(202, 200, 200) 1px;
+}
+
+.header .logo {
+  display: grid;
+  justify-content: flex-start;
+  font-size: 37px;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.header h2 {
+  display: grid;
+  justify-content: flex-start;
+  font-size: 17px;
+  padding-left: 1rem;
+}
+
+.header .search-bar {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  justify-content: flex-start;
+  height: 5rem;
+  border-bottom: solid rgb(202, 200, 200) 1px;
+  border-left: solid rgb(202, 200, 200) 1px;
+}
+
+.search-bar input {
+  margin-left: 2rem;
+  border: none;
+  padding: 15px 0px;
+  width: 30rem;
+  font-size: 15px;
+}
+.search-bar input:focus {
+  outline: none;
+  border-bottom: solid rgb(202, 200, 200) 1px;
+}
+
+.header .header-profile {
+  margin-right: 1rem;
+  margin-top: .4rem;
+  height: 4.6rem;
+  border-bottom: solid rgb(202, 200, 200) 1px;
+}
+
+.header .header-profile img {
+  border-radius: 50px;
+}
+
+.header .header-profile span {
+  background: -webkit-linear-gradient(rgba(223, 19, 223, 0.575), rgba(61, 40, 248, 0.712) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
 }

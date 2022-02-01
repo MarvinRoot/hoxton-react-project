@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useStore } from "../store"
+import { useStore } from "./components/store"
 
 export function SignIn() {
     const navigate = useNavigate()
@@ -9,7 +9,6 @@ export function SignIn() {
         for(const user of users){
             if(user.email === email && user.password === password){
                 updateUser(user)
-                console.log(user);
             }
         }
     }
@@ -20,19 +19,19 @@ export function SignIn() {
             <form onSubmit={(e)=> {
                         e.preventDefault()
                         signInUser(e.target.email.value, e.target.password.value)
-                        navigate('/main')
+                        (user===null ? e.target.reset() : navigate('/main'))
                     }}>
                 <div className="container">
                     <h1>Hey there!</h1>
 
                     <label>
                         <span>Email</span>
-                        <input required name="email" type="email" placeholder="Enter your email adress" />
+                        <input required defaultValue={'marvin@mail.com'} name="email" type="email" placeholder="Enter your email adress" />
                     </label>
 
                     <label>
                         <span>Password</span>
-                        <input required name="password" type="password" placeholder="Enter your password" />
+                        <input required defaultValue={'marvin'} name="password" type="password" placeholder="Enter your password" />
                     </label>
 
                     <button type="submit" value="Submit">

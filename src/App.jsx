@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Main } from './components/pages/Main'
-import { SignIn } from './components/pages/SignIn'
-import { SignUp } from './components/pages/SignUp'
-import { useStore } from './components/store'
+import { Main } from './pages/Main'
+import { SignIn } from './pages/SignIn'
+import { SignUp } from './pages/SignUp'
+import { useStore } from './pages/components/store'
 
 function App() {
   const {updateUsers} = useStore()

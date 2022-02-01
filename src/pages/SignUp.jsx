@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { useStore } from "../store"
+import { useStore } from "./components/store"
 
 export function SignUp() {
     const navigate = useNavigate()
@@ -8,14 +8,14 @@ export function SignUp() {
     function addUser(username, email, password) {
         //update state
         let updatedUsers = JSON.parse(JSON.stringify(users))
-        updatedUsers.push({ username: username, email: email, password: password, favoriteSongs: [], playlists: [], favoriteArtists: [] })
+        updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteSongs: [], playlists: [], favoriteArtists: [] })
         updateUsers(updatedUsers)
         updateUser(updatedUsers[updatedUsers.length-1])
         //update server
         fetch('http://localhost:3001/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({username: username, email: email, password: password, favoriteSongs: [], playlists: [], favoriteArtists: [] })
+            body: JSON.stringify({username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteSongs: [], playlists: [], favoriteArtists: [] })
         })
     }
     return (
