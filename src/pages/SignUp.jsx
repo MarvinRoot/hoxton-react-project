@@ -8,14 +8,14 @@ export function SignUp() {
     function addUser(username, email, password) {
         //update state
         let updatedUsers = JSON.parse(JSON.stringify(users))
-        updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteSongs: [], playlists: [], favoriteArtists: [] })
+        updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
         updateUsers(updatedUsers)
         updateUser(updatedUsers[updatedUsers.length-1])
         //update server
         fetch('http://localhost:3001/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteSongs: [], playlists: [], favoriteArtists: [] })
+            body: JSON.stringify({username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
         })
     }
     return (
@@ -25,7 +25,7 @@ export function SignUp() {
             <form onSubmit={(e)=> {
                 e.preventDefault()
                 addUser(e.target.username.value, e.target.email.value, e.target.password.value)
-                navigate('/main')
+                navigate('/pick-favorites')
             }}>
                 <div className="container">
                     <h1>SIGN UP!</h1>

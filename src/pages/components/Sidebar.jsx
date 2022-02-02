@@ -8,6 +8,5 @@ export function Sidebar() {
             <h2>Playlists</h2>
             <h2>Favorite Artists</h2>
         </section>
-        
     )
 }

@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
+import { MainPage } from "./components/MainPage";
 
 export function Main() {
     return (
@@ -7,7 +8,7 @@ export function Main() {
             <Header/>
             <section className="main-wrapper">
                 <Sidebar />
-                <div className="main-page-content"><h1>main page content</h1></div>
+                <MainPage />
             </section>
             
         </section>

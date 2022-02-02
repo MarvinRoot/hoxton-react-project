@@ -25,7 +25,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container h2{
+.sign-in h2, .sign-up h2{
   margin-bottom: 5rem;
   text-align: center;
   background: -webkit-linear-gradient(rgba(13, 9, 44, 0.712),rgba(133, 61, 133, 0.575) );
@@ -194,7 +194,7 @@ body {
   transition: .3s;
 }
 
-.sidebar h1:hover, h2:hover {
+.sidebar h1:hover, .sidebar h2:hover {
   cursor: pointer;
   color: rgba(133, 61, 133, 0.575);
   border-left: solid 5px rgba(133, 61, 133, 0.575);
@@ -206,4 +206,86 @@ body {
   color: #52525D;
   font-weight: 100;
   transition: .3s;
+}
+
+.pick-favorites {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  align-content: flex-start;
+  justify-content: center;
+  background-color: rgba(13, 9, 44, 0.712);
+}
+
+.pick-favorites h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: rgba(253, 133, 253, 0.575);
+}
+
+.pick-favorites ul {
+  list-style-type: none;
+}
+
+.pick-favorites li {
+  display: inline-block;
+}
+
+.pick-favorites input[type="checkbox"]{
+  display: none;
+}
+
+.pick-favorites label {
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pick-favorites label::before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+.pick-favorites label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+/* .pick-favorites :checked+label {
+  border-color: #ddd;
+} */
+
+.pick-favorites :checked+label::before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+.pick-favorites :checked+label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
 }

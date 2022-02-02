@@ -2,23 +2,28 @@
   "genres": [
     {
       "id": 1,
-      "name": "Hip-Hop"
+      "name": "Hip-Hop",
+      "pic": "https://i.scdn.co/image/ab67706f000000036cb04ce4baed2e4cc0d11461"
     },
     {
       "id": 2,
-      "name": "Pop"
+      "name": "Pop",
+      "pic": "https://i.scdn.co/image/ab67706c0000bebbc14667db36e06ca21c2746fb"
     },
     {
       "id": 3,
-      "name": "Rock"
+      "name": "Rock",
+      "pic": "https://i.scdn.co/image/ab67706f000000034eb58a097da59ad442e26bf2"
     },
     {
       "id": 4,
-      "name": "Electronic"
+      "name": "Electronic",
+      "pic": "https://i.scdn.co/image/ab67706f000000034d4a7ce30e78b9212beb2712"
     },
     {
       "id": 5,
-      "name": "Classical"
+      "name": "Classical",
+      "pic": "https://i.scdn.co/image/ab67706c0000bebbd54237616a14c76c37b65f8b"
     }
   ],
   "songs": [
@@ -234,6 +239,7 @@
       "email": "marvin@mail.com",
       "password": "marvin",
       "profilePic": "https://avatars.dicebear.com/api/avataaars/Marvin.svg",
+      "favoriteGenres": [],
       "favoriteSongs": [
         {
           "id": 1,
@@ -330,20 +336,22 @@
       ]
     },
     {
-      "username": "vini",
-      "email": "vini@mail.com",
-      "password": "vini",
-      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "username": "nani",
+      "email": "nani@mail.com",
+      "password": "nani",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/nani.svg",
+      "favoriteGenres": [],
       "favoriteSongs": [],
       "playlists": [],
       "favoriteArtists": [],
       "id": 2
     },
     {
-      "username": "nani",
-      "email": "nani@mail.com",
-      "password": "nani",
-      "profilePic": "https://avatars.dicebear.com/api/avataaars/nani.svg",
+      "username": "vini",
+      "email": "vini@mail.com",
+      "password": "vini",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "favoriteGenres": [],
       "favoriteSongs": [],
       "playlists": [],
       "favoriteArtists": [],

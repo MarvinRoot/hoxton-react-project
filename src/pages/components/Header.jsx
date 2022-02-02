@@ -1,6 +1,6 @@
 import { useStore } from './store';
 export function Header() {
-    const { user, search, updateSearch } = useStore()
+    const { user, updateSearch } = useStore()
 
     return (
         <section className="header">
