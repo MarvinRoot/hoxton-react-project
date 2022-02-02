@@ -25,7 +25,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-h2{
+.container h2{
   margin-bottom: 5rem;
   text-align: center;
   background: -webkit-linear-gradient(rgba(13, 9, 44, 0.712),rgba(133, 61, 133, 0.575) );
@@ -44,7 +44,6 @@ h2{
 }
 
 .container h1{
-
   text-align: center;
   background: -webkit-linear-gradient(rgba(223, 19, 223, 0.575), rgba(61, 40, 248, 0.712) );
   -webkit-background-clip: text;
@@ -95,12 +94,12 @@ h2{
 
 .hoxtify-app .header {
   display: grid;
-  grid-template-columns: 17rem 1fr auto;
+  grid-template-columns: 14rem 1fr 10rem;
 }
 
 .hoxtify-app .main-wrapper {
   display: grid;
-  grid-template-columns: 17rem 1fr;
+  grid-template-columns: 14rem 1fr;
 }
 
 .main-wrapper .main-page-content {
@@ -120,6 +119,11 @@ h2{
   justify-content: flex-start;
   font-size: 17px;
   padding-left: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  background: -webkit-linear-gradient(rgba(13, 9, 44, 0.712),rgba(133, 61, 133, 0.575) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header .search-bar {
@@ -131,23 +135,31 @@ h2{
   border-bottom: solid rgb(202, 200, 200) 1px;
   border-left: solid rgb(202, 200, 200) 1px;
 }
-
+.topbar-search-icon{
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
 .search-bar input {
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   border: none;
   padding: 15px 0px;
   width: 30rem;
   font-size: 15px;
+  border-bottom: solid rgb(202, 200, 200) 1px;
+  transition: .3s;
 }
 .search-bar input:focus {
   outline: none;
-  border-bottom: solid rgb(202, 200, 200) 1px;
+  border-bottom: solid rgba(223, 19, 223, 0.575) 1px;
+  color: rgba(223, 19, 223, 0.575);
 }
 
 .header .header-profile {
-  margin-right: 1rem;
-  margin-top: .4rem;
-  height: 4.6rem;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  height: 5rem;
   border-bottom: solid rgb(202, 200, 200) 1px;
 }
 
@@ -156,9 +168,42 @@ h2{
 }
 
 .header .header-profile span {
-  background: -webkit-linear-gradient(rgba(223, 19, 223, 0.575), rgba(61, 40, 248, 0.712) );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 16px;
+  color: #191919;
+  font-size: 18px;
   font-weight: 600;
+  transition: .2s;
+}
+.header .header-profile span:hover {
+  cursor: pointer;
+  color: rgba(133, 61, 133, 0.575);
+}
+.header .header-profile{
+  cursor: pointer;
+}
+
+.sidebar {
+  display: grid;
+  align-content: center;
+  grid-gap: 1rem ;
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  padding-left: 1rem;
+  color: #191919;
+  transition: .3s;
+}
+
+.sidebar h1:hover, h2:hover {
+  cursor: pointer;
+  color: rgba(133, 61, 133, 0.575);
+  border-left: solid 5px rgba(133, 61, 133, 0.575);
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  padding-left: 2.2rem;
+  color: #52525D;
+  font-weight: 100;
+  transition: .3s;
 }
