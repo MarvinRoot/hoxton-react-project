@@ -5,18 +5,29 @@ export function SignUp() {
     const navigate = useNavigate()
     const { users, updateUsers, updateUser } = useStore()
 
-    function addUser(username, email, password) {
+    function addUser(usernamee, eemail, passsword) {
         //update state
-        let updatedUsers = JSON.parse(JSON.stringify(users))
-        updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
-        updateUsers(updatedUsers)
-        updateUser(updatedUsers[updatedUsers.length-1])
-        //update server
         fetch('http://localhost:3001/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
+            body: JSON.stringify({username: usernamee, email: eemail, password: passsword, profilePic: `https://avatars.dicebear.com/api/avataaars/${usernamee}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
+        }).then(resp => resp.json()).then(user => {
+            let newUser = JSON.parse(JSON.stringify(user))
+            let updatedUsers = JSON.parse(JSON.stringify(users))
+            updatedUsers.push(newUser)
+            updateUsers(updatedUsers)
+            updateUser(updatedUsers[updatedUsers.length-1])
         })
+        
+        // .then(users => {
+        //     let updatedUsers = JSON.parse(JSON.stringify(users))
+        // updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
+        // updateUsers(updatedUsers)
+        // updateUser(updatedUsers[updatedUsers.length-1])
+        // })
+        
+        //update server
+        
     }
     return (
         <div className="sign-up">
@@ -24,7 +35,7 @@ export function SignUp() {
             <h2>Your daily music dose</h2>
             <form onSubmit={(e)=> {
                 e.preventDefault()
-                addUser(e.target.username.value, e.target.email.value, e.target.password.value)
+                addUser(e.target.usernamee.value, e.target.eemail.value, e.target.passsword.value)
                 navigate('/pick-favorites')
             }}>
                 <div className="container">
@@ -32,17 +43,17 @@ export function SignUp() {
 
                     <label>
                         <span>Username</span>
-                        <input required name="username" type="text" placeholder="Create a username" />
+                        <input required name="usernamee" type="text" placeholder="Create a username" />
                     </label>
 
                     <label>
                         <span>Email</span>
-                        <input required name="email" type="email" placeholder="Enter your email adress" />
+                        <input required name="eemail" type="email" placeholder="Enter your email adress" />
                     </label>
 
                     <label>
                         <span>Password</span>
-                        <input required name="password" type="password" placeholder="Create a password" />
+                        <input required name="passsword" type="password" placeholder="Create a password" />
                     </label>
 
                     <button type="submit" value="Submit">

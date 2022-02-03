@@ -15,7 +15,7 @@ function App() {
 
     fetch('http://localhost:3001/genres').then(resp => resp.json())
     .then(genresFromServer => updateGenres(genresFromServer))
-  })
+  }, [])
 
   return (
     <div className="App">

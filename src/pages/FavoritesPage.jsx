@@ -7,11 +7,11 @@ export function FavoritesPage() {
 
     function handleOnChange() {
         let selectedGenres = [
-            ...document.querySelectorAll(`input`),
+            ...document.getElementsByClassName('input') ,
           ]
             .filter((checkbox) => checkbox.checked)
             .map((checkbox) => checkbox.value);
-      
+            console.log(selectedGenres);
         //update server
         fetch(`http://localhost:3001/users/${user.id}`, {
             method: 'PATCH',
@@ -28,7 +28,7 @@ export function FavoritesPage() {
                     {genres.map(genre => {
                         return (
                             <li key={genre.id} >
-                                <input onChange={handleOnChange} type="checkbox" value={genre} id={`cb${genre.id}`} />
+                                <input className="input" onChange={handleOnChange} type="checkbox" value={genre.id} id={`cb${genre.id}`} />
                                 <label htmlFor={`cb${genre.id}`}>
                                     <img src={genre.pic} />
                                 </label>

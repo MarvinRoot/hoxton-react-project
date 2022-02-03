@@ -212,15 +212,32 @@ body {
   display: grid;
   height: 100vh;
   width: 100vw;
-  align-content: flex-start;
-  justify-content: center;
-  background-color: rgba(13, 9, 44, 0.712);
+  align-content: center;
+  justify-items: center;
+  background-color: rgba(6, 10, 51, 0.89);
+  grid-gap: 2rem;
 }
 
 .pick-favorites h1 {
-  font-size: 40px;
   text-transform: uppercase;
-  color: rgba(253, 133, 253, 0.575);
+  /* margin-bottom: 0.7rem; */
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: 'Noto Serif JP', serif;
+  color: rgba(255, 0, 255, 0.575);
+  text-shadow: 2px 2px 17px rgba(255, 0, 255, 0.582);
+  /* padding-top: 2rem; */
+}
+
+.pick-favorites h2 {
+  /* margin-bottom: 0.7rem; */
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: 'Noto Serif JP', serif;
+  color: rgba(255, 0, 255, 0.575);
+  text-shadow: 2px 2px 17px rgba(255, 0, 255, 0.582);
 }
 
 .pick-favorites ul {
@@ -268,8 +285,8 @@ body {
 }
 
 .pick-favorites label img {
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
@@ -280,7 +297,7 @@ body {
 
 .pick-favorites :checked+label::before {
   content: "✓";
-  background-color: grey;
+  background-color: rgba(255, 0, 255, 0.582);
   transform: scale(1);
 }
 
@@ -288,4 +305,22 @@ body {
   transform: scale(0.9);
   box-shadow: 0 0 5px #333;
   z-index: -1;
+  box-shadow: 0px 0px 40px rgba(255, 0, 255, 0.575);
+
+}
+
+.pick-favorites button {
+  background-color: rgba(255, 0, 255, 0.575);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  width: 270px ;
+  cursor: pointer;
+  text-align: center;
+  transition: .5s;
+}
+
+.pick-favorites button:hover {
+  box-shadow: 0px 0px 17px rgba(255, 0, 255, 0.575);
 }
