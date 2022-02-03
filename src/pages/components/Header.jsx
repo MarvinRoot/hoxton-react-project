@@ -4,7 +4,7 @@ export function Header() {
 
     return (
         <section className="header">
-            <div>
+            <div className='logo-div'>
                 <h1 className="logo">HOXTIFY</h1>
                 <h2>Your daily music dose</h2>
             </div>

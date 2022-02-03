@@ -6,6 +6,9 @@ import { SignIn } from './pages/SignIn'
 import { SignUp } from './pages/SignUp'
 import { useStore } from './pages/components/store'
 import { FavoritesPage } from './pages/FavoritesPage'
+import { SongDetails } from './pages/SongDetails'
+import { ArtistDetails } from './pages/ArtistDetails'
+
 function App() {
   const {updateUsers, updateGenres, updateSongs, updateArtists} = useStore()
  
@@ -30,6 +33,8 @@ function App() {
         <Route path='/sign-in' element={< SignIn />} />
         <Route path='/sign-up' element={< SignUp />} />
         <Route path='/main' element={< Main />} />
+        <Route path='/main/:songId' element={< SongDetails />}/>
+        <Route path='/main/:artistId' element={< ArtistDetails />}/>
         <Route path='/pick-favorites' element={< FavoritesPage/>} />
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
