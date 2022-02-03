@@ -12,13 +12,11 @@ export function SignUp() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({username: usernamee, email: eemail, password: passsword, profilePic: `https://avatars.dicebear.com/api/avataaars/${usernamee}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
         }).then(resp => resp.json()).then(user => {
-            let newUser = JSON.parse(JSON.stringify(user))
             let updatedUsers = JSON.parse(JSON.stringify(users))
-            updatedUsers.push(newUser)
+            updatedUsers.push(user)
             updateUsers(updatedUsers)
-            updateUser(updatedUsers[updatedUsers.length-1])
+            updateUser(user)
         })
-        
         // .then(users => {
         //     let updatedUsers = JSON.parse(JSON.stringify(users))
         // updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })

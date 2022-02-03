@@ -8,7 +8,7 @@ import { useStore } from './pages/components/store'
 import { FavoritesPage } from './pages/FavoritesPage'
 function App() {
   const {updateUsers, updateGenres} = useStore()
-
+ 
   useEffect(() => {
     fetch('http://localhost:3001/users').then(resp => resp.json())
     .then(usersFromServer => updateUsers(usersFromServer))

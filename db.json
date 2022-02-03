@@ -336,15 +336,66 @@
       ]
     },
     {
-      "username": "vini",
-      "email": "vini@mail.cmo",
-      "password": "vini",
-      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "username": "nani",
+      "email": "nani@mail.com",
+      "password": "nani",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/nani.svg",
       "favoriteGenres": [],
       "favoriteSongs": [],
       "playlists": [],
       "favoriteArtists": [],
       "id": 2
+    },
+    {
+      "username": "nanii",
+      "email": "nani@mail.com",
+      "password": "naniii",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/nanii.svg",
+      "favoriteGenres": [],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 3
+    },
+    {
+      "username": "asd",
+      "email": "asd@mail.com",
+      "password": "asd",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/asd.svg",
+      "favoriteGenres": [],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 4
+    },
+    {
+      "username": "nico",
+      "email": "nico@mail.com",
+      "password": "nico",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/nico.svg",
+      "favoriteGenres": [
+        3,
+        4,
+        5
+      ],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 5
+    },
+    {
+      "username": "fafa",
+      "email": "fafa@mail.com",
+      "password": "fafa",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/fafa.svg",
+      "favoriteGenres": [
+        3,
+        4
+      ],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 6
     }
   ],
   "artists": [

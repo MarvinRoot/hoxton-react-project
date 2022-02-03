@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useStore } from "./components/store"
 
 export function FavoritesPage() {
-    const { user, genres } = useStore()
+    const { user, genres, updateUser } = useStore()
     const navigate = useNavigate()
 
     function handleOnChange() {
@@ -10,15 +10,19 @@ export function FavoritesPage() {
             ...document.getElementsByClassName('input') ,
           ]
             .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => checkbox.value);
+            .map((checkbox) => Number(checkbox.value));
             console.log(selectedGenres);
         //update server
         fetch(`http://localhost:3001/users/${user.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ favoriteGenres: selectedGenres })
+        }).then(resp => resp.json()).then(user => {
+            updateUser(user)
         })
     }
+    if(user === null) return <h1>loading</h1>
+
     return (
         <section className="pick-favorites">
             <h1> Welcome to hoxtify {user.username} </h1>
@@ -37,7 +41,9 @@ export function FavoritesPage() {
                     })}
                 </ul>
             </div>
-            <button>One click left to eargasm</button>
+            <button onClick={() => {
+                (user.favoriteGenres.length === 0 ? alert('Pick at least one genre!!!') : navigate('/main'))
+            }}>One click away from eargasm</button>
         </section>
     )
 }
