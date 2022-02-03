@@ -13,7 +13,7 @@ export function MainPage() {
                     {songs.filter(song => user.favoriteGenres.includes(song.genreId))
                         .map(song => {
                             return (
-                                <Link to={`/main/${song.id}`}>
+                                <Link to={`/song/${song.id}`}>
                                     <div key={song.id} className="music-card" >
                                         <img style={{ width: "300px", paddingBottom: ".5rem", borderRadius: "20px" }} src={song.img} alt="" />
                                         <h2 style={{ color: "#191919", fontSize: "18px", fontWeight: "200" }}>{song.title}</h2>
@@ -52,6 +52,21 @@ export function MainPage() {
                         <h2 style={{ color: "#191919", fontSize: "18px", fontWeight: "200", paddingTop: ".5rem" }}>Ep 4: Call Your Mom</h2>
                         <h3 style={{ color: "#52525D", fontSize: "13px", fontWeight: "200" }}>Criminal</h3>
                     </div>
+                </div>
+            </div>
+            <div id="music" className="music-tracks" style={{ marginTop: "2rem" }}>
+                <h1 style={{ color: "#191919", fontSize: "28px", fontWeight: "700" }}>Artists</h1>
+                <div className="music-card-wrapper" >
+                    {artists.map(artist => {
+                        return (
+                            <Link to={`/artist/${artist.id}`}>
+                                <div key={artist.id} className="music-card" >
+                                    <img style={{ width: "200px", paddingBottom: ".5rem", borderRadius: "50%" }} src={artist.picture} alt="" />
+                                    <h2 style={{ color: "#191919", fontSize: "20px", fontWeight: "700", textAlign: "center" }}>{artist.name}</h2>
+                                </div>
+                            </Link>
+                        )
+                    })}
                 </div>
             </div>
         </section>

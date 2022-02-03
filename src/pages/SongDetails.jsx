@@ -58,7 +58,7 @@ export function SongDetails() {
                         {artists.filter(artisst => artist[0].genreId === artisst.genreId)
                             .map(artisst => {
                                 return (
-                                    <Link to={`/main/${artisst.id}`}>
+                                    <Link to={`/artist/${artisst.id}`}>
                                     <div key={artisst.id}>
                                         <img style={{ width: "200px", paddingBottom: ".5rem", borderRadius: "50%" }} src={artisst.picture} alt="" />
                                         <h2 style={{ color: "#191919", fontSize: "20px", fontWeight: "700", textAlign: "center" }}>{artisst.name}</h2>

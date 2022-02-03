@@ -1,4 +1,7 @@
-import { useState } from "react"
+import { useEffect,useState } from "react"
+import { Link,useParams } from "react-router-dom"
+import { Header } from "./components/Header"
+import { Sidebar } from "./components/Sidebar"
 import { useStore } from "./components/store"
 
 export function ArtistDetails() {
@@ -21,14 +24,15 @@ export function ArtistDetails() {
         fetch(`http://localhost:3001/artists/${params.artistId}`).then(resp => resp.json())
             .then(artistFromServer => {
                 setArtist(artistFromServer)
+                console.log(asdas);
             })
     }, [])
 
     // not fetched yet
-    if (song === null || artist === null) return <p>Loading...</p>
+    if (artist === null) return <p>Loading...</p>
 
     // fetched but did not get a result back
-    if (song.id === undefined) return <p>Artist not found</p>
+    if (artist.id === undefined) return <p>Artist not found</p>
 
 
     return (
@@ -37,7 +41,7 @@ export function ArtistDetails() {
             <div className="song-content-main-wrapper">
                 <Sidebar />
                 <div className="song-content-wrapper">
-                    <div style={{ display: "grid", gridTemplateColumns: "900px 1fr", alignItems: "center", backgroundColor: "#333", gap: "3rem" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "500px 1fr", alignItems: "center", backgroundColor: "#333", gap: "3rem" }}>
                         <img style={{ borderRadius: "50%", width: "500px" }} src={artist[0].picture} alt="" />
                         <h1 style={{ color: "#f40", fontSize: "35px", fontWeight: "700" }}>{artist[0].name}</h1>
                     </div>
@@ -49,7 +53,7 @@ export function ArtistDetails() {
                         {artists.filter(artisst => artist[0].genreId === artisst.genreId)
                             .map(artisst => {
                                 return (
-                                    <Link to={`/main/${artisst.id}`}>
+                                    <Link to={`/artist/${artisst.id}`}>
                                         <div key={artisst.id}>
                                             <img style={{ width: "200px", paddingBottom: ".5rem", borderRadius: "50%" }} src={artisst.picture} alt="" />
                                             <h2 style={{ color: "#191919", fontSize: "20px", fontWeight: "700", textAlign: "center" }}>{artisst.name}</h2>
