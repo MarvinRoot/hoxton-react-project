@@ -21,7 +21,8 @@ export function FavoritesPage() {
             updateUser(user)
         })
     }
-    if(user === null) return <h1>loading</h1>
+  
+  if(user === null) return <div style={{backgroundcolor: "rgba(6, 10, 51, 0.89)"} }><h1>loading</h1></div>
 
     return (
         <section className="pick-favorites">

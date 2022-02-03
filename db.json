@@ -307,7 +307,7 @@
       "email": "marvin@mail.com",
       "password": "marvin",
       "profilePic": "https://avatars.dicebear.com/api/avataaars/Marvin.svg",
-      "favoriteGenres": [],
+      "favoriteGenres": [1],
       "favoriteSongs": [
         {
           "id": 2,

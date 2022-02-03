@@ -7,7 +7,7 @@ import { SignUp } from './pages/SignUp'
 import { useStore } from './pages/components/store'
 import { FavoritesPage } from './pages/FavoritesPage'
 function App() {
-  const {updateUsers, updateGenres} = useStore()
+  const {updateUsers, updateGenres, updateSongs, updateArtists} = useStore()
  
   useEffect(() => {
     fetch('http://localhost:3001/users').then(resp => resp.json())
@@ -15,6 +15,12 @@ function App() {
 
     fetch('http://localhost:3001/genres').then(resp => resp.json())
     .then(genresFromServer => updateGenres(genresFromServer))
+
+    fetch('http://localhost:3001/songs').then(resp => resp.json())
+    .then(songsFromServer => updateSongs(songsFromServer))
+
+    fetch('http://localhost:3001/artists').then(resp => resp.json())
+    .then(artistsFromServer => updateArtists(artistsFromServer))
   }, [])
 
   return (

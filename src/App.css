@@ -102,9 +102,6 @@ body {
   grid-template-columns: 14rem 1fr;
 }
 
-.main-wrapper .main-page-content {
-  border-left: solid rgb(202, 200, 200) 1px;
-}
 
 .header .logo {
   display: grid;
@@ -291,9 +288,6 @@ body {
   transform-origin: 50% 50%;
 }
 
-/* .pick-favorites :checked+label {
-  border-color: #ddd;
-} */
 
 .pick-favorites :checked+label::before {
   content: "✓";
@@ -323,4 +317,12 @@ body {
 
 .pick-favorites button:hover {
   box-shadow: 0px 0px 17px rgba(255, 0, 255, 0.575);
+}
+
+.music-card-wrapper {
+  padding-top: 1.7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: start;
+  grid-gap: 1.4rem;
 }

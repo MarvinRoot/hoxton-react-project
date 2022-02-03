@@ -5,8 +5,12 @@ export const useStore = create((set, get) => ({
     user: null,
     search: null,
     genres: [],
+    songs: [],
+    artists: [],
     updateUsers: newUsers => set({users: newUsers}),
     updateUser: newUser => set({user: newUser}),
     updateSearch: newSearch => set({search: newSearch}),
-    updateGenres: newGenres => set({genres: newGenres})
+    updateGenres: newGenres => set({genres: newGenres}),
+    updateSongs: newSongs => set({songs: newSongs}),
+    updateArtists: newArtists => set({artists: newArtists})
 }))
