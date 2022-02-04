@@ -7,8 +7,7 @@ import { useStore } from "./components/store"
 
 export function SongDetails() {
     const params = useParams()
-    const { artists, user, updateUser, artist, updateArtist, updateModal, songs } = useStore()
-    const [song, setSong] = useState(null)
+    const { artists, user, updateUser, artist, updateArtist, updateModal, songs, song, updateSong } = useStore()
 
     function addToFavorites(song) {
 
@@ -26,7 +25,7 @@ export function SongDetails() {
     useEffect(() => {
         fetch(`http://localhost:3001/songs/${params.songId}`).then(resp => resp.json())
             .then(songFromServer => {
-                setSong(songFromServer)
+                updateSong(songFromServer)
                 let songArtist = artists.filter(artist => songFromServer.artist === artist.name)
                 songArtist = songArtist[0]
                 updateArtist(songArtist)

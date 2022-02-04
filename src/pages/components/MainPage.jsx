@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useStore } from "./store"
 
 export function MainPage() {
-    const { songs, artists, user } = useStore()
+    const { songs, artists, user, search } = useStore()
 
     return (
 
@@ -14,7 +14,7 @@ export function MainPage() {
                         .map(song => {
                             return (
                                 <Link key={song.id} to={`/song/${song.id}`}>
-                                    <div  className="music-card" >
+                                    <div className="music-card" >
                                         <img style={{ width: "300px", paddingBottom: ".5rem", borderRadius: "20px" }} src={song.img} alt="" />
                                         <h2 style={{ color: "#191919", fontSize: "18px", fontWeight: "200" }}>{song.title}</h2>
                                         <h3 style={{ color: "#52525D", fontSize: "13px", fontWeight: "200" }}>{song.artist}</h3>
@@ -60,7 +60,7 @@ export function MainPage() {
                     {artists.map(artist => {
                         return (
                             <Link key={artist.id} to={`/artist/${artist.id}`}>
-                                <div  className="music-card" >
+                                <div className="music-card" >
                                     <img style={{ width: "200px", paddingBottom: ".5rem", borderRadius: "50%" }} src={artist.picture} alt="" />
                                     <h2 style={{ color: "#191919", fontSize: "20px", fontWeight: "700", textAlign: "center" }}>{artist.name}</h2>
                                 </div>
