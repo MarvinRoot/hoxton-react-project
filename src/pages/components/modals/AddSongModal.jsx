@@ -20,17 +20,6 @@ export default function AddSongModal() {
             body: JSON.stringify({ playlists: updatedPlaylists })
         }).then(resp => resp.json()).then(user => updateUser(user))
     }
-    function addToPlaylist(name) {
-        let updatedPlaylists = user.playlists
-        let newPlaylist = JSON.parse(JSON.stringify(user.playlists[playlist.id - 1]))
-        newPlaylist.push(Number(song.id))
-
-        fetch(`http://localhost:3001/users/${user.id}`, {
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ playlists: newPlaylist })
-        }).then(resp => resp.json()).then(user => updateUser(user))
-    }
 
     return (
         <div className="modal-wrapper" onClick={() => updateModal('')}>
