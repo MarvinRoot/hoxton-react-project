@@ -6,14 +6,13 @@ import { useStore } from "./components/store"
 
 export function SongDetails() {
     const params = useParams()
-    const { artists, user, updateUser } = useStore()
+    const { artists, user, updateUser, artist, updateArtist } = useStore()
     const [song, setSong] = useState(null)
-    const [artist, setArtist] = useState(null)
 
     function addToFavorites(song) {
 
         let newFavSongs = JSON.parse(JSON.stringify(user.favoriteSongs))
-        if (user.favoriteSongs.find(songg => songg.id === song.id)) return null
+        if (user.favoriteSongs.find(songg => songg === song.id)) return null
         else newFavSongs.push(Number(song.id))
 
         fetch(`http://localhost:3001/users/${user.id}`, {
@@ -28,7 +27,8 @@ export function SongDetails() {
             .then(songFromServer => {
                 setSong(songFromServer)
                 let songArtist = artists.filter(artist => songFromServer.artist === artist.name)
-                setArtist(songArtist)
+                songArtist = songArtist[0]
+                updateArtist(songArtist)
             })
     }, [])
 
@@ -44,22 +44,22 @@ export function SongDetails() {
             <div className="song-content-main-wrapper">
                 <Sidebar />
                 <div className="song-content-wrapper">
-                    <div style={{ display: "grid", gridTemplateColumns: "900px 1fr", alignItems: "center", backgroundColor: "#333" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "900px 1fr", alignItems: "center", gap: "2rem"}}>
                         <iframe width="900px" height="400px" scrolling="no" frameborder="no" allow="autoplay" src={song.src}></iframe>
-                        <img style={{ borderRadius: "50%", width: "300px" }} src={artist[0].picture} alt="" />
+                        <Link to={`/artist/${artist.id}`}><img style={{ borderRadius: "50%", width: "300px" }} src={artist.picture} alt="" /></Link>
                     </div>
                     <div style={{ display: "grid", gridAutoFlow: "column", justifyContent: "center", gap: "2rem", marginBottom: "2rem" }}>
-                        <button onClick={addToFavorites(song)}>Add to favorite songs</button>
+                        <button onClick={()=>addToFavorites(song)}>Add to favorite songs</button>
                         <button>Add to playlist</button>
                     </div>
                     <h1 style={{ color: "#191919", fontSize: "28px", fontWeight: "700" }}>Similar Artists</h1>
                     <div className="artist-card-wrapper">
 
-                        {artists.filter(artisst => artist[0].genreId === artisst.genreId)
+                        {artists.filter(artisst => artist.genreId === artisst.genreId && artisst.id !== artist.id)
                             .map(artisst => {
                                 return (
-                                    <Link to={`/artist/${artisst.id}`}>
-                                    <div key={artisst.id}>
+                                    <Link key={artisst.id} to={`/artist/${artisst.id}`}>
+                                    <div >
                                         <img style={{ width: "200px", paddingBottom: ".5rem", borderRadius: "50%" }} src={artisst.picture} alt="" />
                                         <h2 style={{ color: "#191919", fontSize: "20px", fontWeight: "700", textAlign: "center" }}>{artisst.name}</h2>
                                     </div>

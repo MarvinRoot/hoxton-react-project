@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useStore } from "./components/store"
 
@@ -12,6 +13,10 @@ export function SignIn() {
             }
         }
     }
+    useEffect(()=>{
+        if(user) navigate('/main')
+    }, [user])
+    
     return (
         <div className="sign-in">
             <h1 className="logo">Hoxtify</h1>
@@ -19,7 +24,7 @@ export function SignIn() {
             <form onSubmit={(e)=> {
                         e.preventDefault()
                         signInUser(e.target.email.value, e.target.password.value)
-                        (user===null ? e.target.reset() : navigate('/main'))
+                        
                     }}>
                 <div className="container">
                     <h1>Hey there!</h1>

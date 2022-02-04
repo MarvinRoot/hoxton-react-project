@@ -312,11 +312,7 @@
       ],
       "favoriteSongs": [
         1,
-        1,
-        1,
-        1,
-        1,
-        1
+        6
       ],
       "playlists": [
         {
@@ -372,7 +368,23 @@
           ]
         }
       ],
-      "favoriteArtists": []
+      "favoriteArtists": [
+        3
+      ]
+    },
+    {
+      "username": "vini",
+      "email": "vini@mail.cmo",
+      "password": "vini",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "favoriteGenres": [
+        1,
+        4
+      ],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 2
     }
   ],
   "artists": [
@@ -380,7 +392,7 @@
       "name": "Logic",
       "id": 1,
       "genreId": 1,
-      "picture": "https://lite-images-i.scdn.co/image/ab67706f000000027234122001735dfd6f3733d3"
+      "picture": "https://i.scdn.co/image/ab6761610000e5ebc0f43abdba90d508842d7367"
     },
     {
       "name": "Pop Smoke",
