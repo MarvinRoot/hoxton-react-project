@@ -312,7 +312,9 @@
       ],
       "favoriteSongs": [
         1,
-        6
+        6,
+        5,
+        2
       ],
       "playlists": [
         {
@@ -373,7 +375,8 @@
       "favoriteArtists": [
         3,
         7,
-        1
+        1,
+        5
       ]
     },
     {

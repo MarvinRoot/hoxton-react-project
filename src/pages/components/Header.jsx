@@ -5,7 +5,7 @@ export function Header() {
     const navigate = useNavigate()
     return (
         <section className="header">
-            <div className='logo-div'>
+            <div className='logo-div' style={{cursor: "pointer"}} onClick={()=>navigate('/main')}>
                 <h1 className="logo">HOXTIFY</h1>
                 <h2>Your daily music dose</h2>
             </div>

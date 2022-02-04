@@ -7,7 +7,7 @@ import { useStore } from "./components/store"
 
 export function SongDetails() {
     const params = useParams()
-    const { artists, user, updateUser, artist, updateArtist, updateModal } = useStore()
+    const { artists, user, updateUser, artist, updateArtist, updateModal, songs } = useStore()
     const [song, setSong] = useState(null)
 
     function addToFavorites(song) {
@@ -53,6 +53,22 @@ export function SongDetails() {
                         <button onClick={() => addToFavorites(song)}>Add to favorite songs</button>
                         <button onClick={() => updateModal('add-song')}>Add to playlist</button>
                     </div>
+                    <h1 style={{ color: "#191919", fontSize: "28px", fontWeight: "700" }}>Similar Music</h1>
+                    <div className="music-card-wrapper" >
+                        {songs.filter(songg => songg.genreId === song.genreId && songg.id !== song.id)
+                            .map(songg => {
+                                return (
+                                    <Link key={song.id} to={`/song/${song.id}`}>
+                                        <div className="music-card" >
+                                            <img style={{ width: "300px", paddingBottom: ".5rem", borderRadius: "20px" }} src={songg.img} alt="" />
+                                            <h2 style={{ color: "#191919", fontSize: "18px", fontWeight: "200" }}>{songg.title}</h2>
+                                            <h3 style={{ color: "#52525D", fontSize: "13px", fontWeight: "200" }}>{songg.artist}</h3>
+                                        </div>
+                                    </Link>
+                                )
+                            })}
+                    </div>
+                    
                     <h1 style={{ color: "#191919", fontSize: "28px", fontWeight: "700" }}>Similar Artists</h1>
                     <div className="artist-card-wrapper">
 
