@@ -54,7 +54,7 @@ export function MainPage() {
                     </div>
                 </div>
             </div>
-            <div id="music" className="music-tracks" style={{ marginTop: "2rem" }}>
+            <div id="artists" className="music-tracks" style={{ marginTop: "2rem" }}>
                 <h1 style={{ color: "#191919", fontSize: "28px", fontWeight: "700" }}>Artists</h1>
                 <div className="music-card-wrapper" >
                     {artists.map(artist => {

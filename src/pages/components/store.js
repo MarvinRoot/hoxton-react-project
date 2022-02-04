@@ -1,6 +1,6 @@
 import create from 'zustand'
 
-export const useStore = create((set, get) => ({
+export const useStore = create((set) => ({
     users: [],
     user: null,
     search: null,
@@ -8,12 +8,13 @@ export const useStore = create((set, get) => ({
     songs: [],
     artists: [],
     artist: null,
+    modal: '',
     updateUsers: newUsers => set({users: newUsers}),
     updateUser: newUser => set({user: newUser}),
     updateSearch: newSearch => set({search: newSearch}),
     updateGenres: newGenres => set({genres: newGenres}),
     updateSongs: newSongs => set({songs: newSongs}),
     updateArtists: newArtists => set({artists: newArtists}),
-    updateArtist: newArtist => set({artist: newArtist})
-
+    updateArtist: newArtist => set({artist: newArtist}),
+    updateModal: newModal => set({modal: newModal}),
 }))

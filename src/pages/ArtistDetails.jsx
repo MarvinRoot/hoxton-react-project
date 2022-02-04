@@ -10,7 +10,7 @@ export function ArtistDetails() {
 
     function addToFavorites(artist) {
         let newFavArtists = JSON.parse(JSON.stringify(user.favoriteArtists))
-        if (user.favoriteSongs.find(artistt => artistt === artist.id)) return null
+        if (user.favoriteArtists.find(artistt => artistt === artist.id)) return null
         else newFavArtists.push(Number(artist.id))
 
         fetch(`http://localhost:3001/users/${user.id}`, {

@@ -1,9 +1,10 @@
+import { HashLink } from 'react-router-hash-link';
 export function Sidebar() {
     return (
         <section className="sidebar">
-            <h1><a href="#music">♫ Music</a> </h1>
-            <h1><a href="#podcasts">■ Podcasts</a></h1>
-            <h1>○ Artists</h1>
+            <HashLink to={'/main#music'}><h1>♫ Music </h1></HashLink>
+            <HashLink to={'/main#podcasts'}><h1>■ Podcasts</h1></HashLink>
+            <HashLink to={'/main#artists'}><h1>○ Artists</h1></HashLink>
             <h1>♥ Favorites</h1>
             <h2>Favorite Tracks</h2>
             <h2>Playlists</h2>

@@ -63,7 +63,7 @@
       "id": 5,
       "genreId": 1,
       "title": "No Role Modelz",
-      "artist": "J. Cole",
+      "artist": "J.Cole",
       "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1011563983&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
       "img": "https://i.scdn.co/image/ab67616d0000b2736aca031ccc27d2e4dd829d14"
     },
@@ -317,6 +317,7 @@
       "playlists": [
         {
           "title": "Fire",
+          "id": 1,
           "songs": [
             {
               "id": 4,
@@ -346,6 +347,7 @@
         },
         {
           "title": "Sleep",
+          "id": 2,
           "songs": [
             {
               "id": 32,
@@ -369,7 +371,9 @@
         }
       ],
       "favoriteArtists": [
-        3
+        3,
+        7,
+        1
       ]
     },
     {
