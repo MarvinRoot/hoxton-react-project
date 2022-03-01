@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../config";
 import { useStore } from "./components/store"
 
 export function FavoritesPage() {
-    const { user, genres, updateUser } = useStore()
+    const { user, genres } = useStore()
     const navigate = useNavigate()
 
     function handleOnChange() {
@@ -10,20 +11,16 @@ export function FavoritesPage() {
             ...document.getElementsByClassName('input') ,
           ]
             .filter((checkbox) => checkbox.checked)
-            .map((checkbox) => Number(checkbox.value));
+            .map((checkbox) => checkbox.value);
             console.log(selectedGenres);
         //update server
-        fetch(`http://localhost:3001/users/${user.id}`, {
+        fetch(`${API_URL}/users/${user.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ favoriteGenres: selectedGenres })
-        }).then(resp => resp.json()).then(user => {
-            updateUser(user)
         })
     }
-  
-  if(user === null) return <div style={{backgroundcolor: "rgba(6, 10, 51, 0.89)"} }><h1>loading</h1></div>
-
+    
     return (
         <section className="pick-favorites">
             <h1> Welcome to hoxtify {user.username} </h1>
@@ -42,9 +39,7 @@ export function FavoritesPage() {
                     })}
                 </ul>
             </div>
-            <button onClick={() => {
-                (user.favoriteGenres.length === 0 ? alert('Pick at least one genre!!!') : navigate('/main'))
-            }}>One click away from eargasm</button>
+            <button>One click left to eargasm</button>
         </section>
     )
 }
