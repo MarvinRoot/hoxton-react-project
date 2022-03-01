@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import { API_URL } from "../../config"
 import { useStore } from "./components/store"
 
 export function SignUp() {
@@ -7,22 +8,32 @@ export function SignUp() {
 
     function addUser(usernamee, eemail, passsword) {
         //update state
-        fetch('http://localhost:3001/users', {
+        fetch(`${API_URL}/users`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username: usernamee, email: eemail, password: passsword, profilePic: `https://avatars.dicebear.com/api/avataaars/${usernamee}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
+            body: JSON.stringify({username: usernamee, email: eemail, password: passsword, profilePic: `https://avatars.dicebear.com/api/avataaars/${usernamee}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
         }).then(resp => resp.json()).then(user => {
+            let newUser = JSON.parse(JSON.stringify(user))
             let updatedUsers = JSON.parse(JSON.stringify(users))
-            updatedUsers.push(user)
+            updatedUsers.push(newUser)
             updateUsers(updatedUsers)
-            updateUser(user)
+            updateUser(updatedUsers[updatedUsers.length-1])
         })
+        // .then(users => {
+        //     let updatedUsers = JSON.parse(JSON.stringify(users))
+        // updatedUsers.push({ username: username, email: email, password: password, profilePic: `https://avatars.dicebear.com/api/avataaars/${username}.svg`, favoriteGenres: [], favoriteSongs: [], playlists: [], favoriteArtists: [] })
+        // updateUsers(updatedUsers)
+        // updateUser(updatedUsers[updatedUsers.length-1])
+        // })
+        
+        //update server
+        
     }
     return (
         <div className="sign-up">
             <h1 className="logo">Hoxtify</h1>
             <h2>Your daily music dose</h2>
-            <form onSubmit={(e) => {
+            <form onSubmit={(e)=> {
                 e.preventDefault()
                 addUser(e.target.usernamee.value, e.target.eemail.value, e.target.passsword.value)
                 navigate('/pick-favorites')
