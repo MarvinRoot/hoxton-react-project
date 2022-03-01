@@ -357,6 +357,156 @@
       "playlists": [],
       "favoriteArtists": [],
       "id": 2
+    },
+    {
+      "username": "vini",
+      "email": "vini@mail.cmo",
+      "password": "vini",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "favoriteGenres": [
+        1,
+        4
+      ],
+      "favoriteSongs": [
+        1,
+        2
+      ],
+      "playlists": [
+        {
+          "title": "fire",
+          "songs": [
+            {
+              "id": 1,
+              "genreId": 1,
+              "title": "Young Jesus",
+              "artist": "Logic",
+              "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/224446118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+              "img": "https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced"
+            },
+            {
+              "id": 1,
+              "genreId": 1,
+              "title": "Young Jesus",
+              "artist": "Logic",
+              "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/224446118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+              "img": "https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced"
+            }
+          ]
+        }
+      ],
+      "favoriteArtists": [
+        1,
+        3,
+        4
+      ],
+      "id": 3
+    },
+    {
+      "username": "Klevisa",
+      "email": "nani@mail.com",
+      "password": "nani",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/Klevisa.svg",
+      "favoriteGenres": [],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 4
+    },
+    {
+      "username": "Klevisa",
+      "email": "klevi@mail.com",
+      "password": "klevi",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/Klevisa.svg",
+      "favoriteGenres": [
+        1,
+        3
+      ],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 5
+    },
+    {
+      "username": "vini",
+      "email": "Krisilatopollari@gmail.com",
+      "password": "n",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "favoriteGenres": [
+        1,
+        3
+      ],
+      "favoriteSongs": [],
+      "playlists": [],
+      "favoriteArtists": [],
+      "id": 6
+    },
+    {
+      "username": "vini",
+      "email": "Krisilatopollari@gmail.com",
+      "password": "n",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/vini.svg",
+      "favoriteGenres": [
+        1,
+        3
+      ],
+      "favoriteSongs": [
+        1,
+        2
+      ],
+      "playlists": [
+        {
+          "title": "jkk",
+          "songs": [
+            {
+              "id": 1,
+              "genreId": 1,
+              "title": "Young Jesus",
+              "artist": "Logic",
+              "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/224446118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+              "img": "https://i.scdn.co/image/ab67616d0000b273f0f7649257d4b99460929ced"
+            }
+          ]
+        }
+      ],
+      "favoriteArtists": [
+        11,
+        9
+      ],
+      "id": 7
+    },
+    {
+      "username": "anxhela",
+      "email": "anxhi@mail.com",
+      "password": "anxhi",
+      "profilePic": "https://avatars.dicebear.com/api/avataaars/anxhela.svg",
+      "favoriteGenres": [
+        1,
+        2
+      ],
+      "favoriteSongs": [
+        8,
+        6
+      ],
+      "playlists": [
+        {
+          "title": "anxhi",
+          "songs": [
+            {
+              "id": 8,
+              "genreId": 2,
+              "title": "New Rules",
+              "artist": "Dua Lipa",
+              "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/332239193&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+              "img": "https://i.scdn.co/image/ab67616d0000b2731764e1a1b94e887206782640"
+            }
+          ]
+        }
+      ],
+      "favoriteArtists": [
+        10,
+        12
+      ],
+      "id": 8
     }
   ],
   "artists": [

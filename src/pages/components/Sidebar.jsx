@@ -8,7 +8,8 @@ export function Sidebar() {
             <HashLink to={'/profile'}><h1>♥ Favorites</h1></HashLink>
             <HashLink to={'/profile#favorite-songs'}></HashLink><h2>Favorite Tracks</h2>
             <HashLink to={'/profile#favorite-artists'}><h2>Favorite Artists</h2></HashLink>
-            <h2>Playlists</h2>
+            <HashLink to={'/profile#playlists'}><h2>Playlists</h2></HashLink>
+            
         </section>
     )
 }

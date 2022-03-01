@@ -3,7 +3,7 @@ import { useStore } from "../store"
 
 export default function AddSongModal() {
 
-    const { updateModal, user, song, updateUser, playlists, updatePlaylists } = useStore()
+    const { updateModal, user, song, updateUser, updatePlaylists } = useStore()
 
     function handleOnClick(playlist, playlistSongs) {
         playlistSongs.push(song)
